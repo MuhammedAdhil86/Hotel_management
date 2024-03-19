@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #555;
+            color: #fff;
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 1em;
+            margin: 0 0.5em;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .dashboard-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard-section h2 {
+            color: #333;
+        }
+
+        .statistics {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .statistic-card {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hotel Management Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="/home/">Home</a>
+        <a href="/roomdisplay/">Rooms</a>
+        <a href="/roompage/">Reservations</a>
+        <a href="#">Customers</a>
+        <a href="#">Reports</a>
+        <!-- Add more navigation links based on your requirements -->
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-section">
+            <h2>Registration</h2>
+            <div class="statistics">
+
+                <a href="/employees_login">
+
+                    <div class="statistic-card">
+                        <h3>Staff</h3>
+                    
+                </a>
+               
+                
+                    
+                </div>
+
+                
+                <div class="statistic-card">
+                   <a href="/customer_login">
+                    <h3>Customer</h3>
+                   </a>
+                    
+                </div>
+               <a href="/admin/">
+                <div class="statistic-card">
+                    <h3>Admin</h3>
+               </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more sections for different functionalities (e.g., reservations, customer management, etc.) -->
+
+    </div>
+
+    <footer>
+        &copy; 2024 Hotel Management System
+    </footer>
+</body>
+</html>

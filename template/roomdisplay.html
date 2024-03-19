@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+ 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    
+        
+    </style>
+</style>
+<body>
+<form action="" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th>Room No</th>
+            <th>Room type</th>
+            <th>price</th>
+            <th>availability</th>
+        </tr>
+        {% for c in cr%}
+        <tr>
+         
+            <td>{{c.no}}</td>
+            <td>{{c.roomtype}}</td>
+            <td>{{c.price}}</td>
+            {% if c.availability%}
+             <td >available</td>
+             {% else %}
+              <td >unavailable</td>
+             {% endif %}
+        </tr>
+
+
+
+        {% endfor %}
+    </table>
+</form>
+</body>
+</html>

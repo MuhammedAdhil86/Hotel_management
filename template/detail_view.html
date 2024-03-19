@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+td{
+    border: 1px solid;
+}
+th{
+    border: 1px solid;
+}
+</style>
+<body>
+<form action="" enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+        </tr>
+        {% for c in cr%}
+        <tr>
+         
+            <td>{{c.username}}</td>
+            <td>{{c.firstname}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.gender}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</form>
+</body>
+</html>

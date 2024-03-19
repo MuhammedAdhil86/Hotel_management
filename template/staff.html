@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Customer Data</title>
+    <style>
+*{
+    margin-left: auto;
+            margin-right: auto;
+         
+}
+
+.buttongroup{
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    color: #fff;
+    background-color: rgb(27, 133, 215);
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+    border-radius: 4px;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+          
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .customer-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 400px;
+            height: 600px;
+            
+        }
+
+        .customer-image {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .customer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .customer-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .customer-id {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .customer-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="customer-card">
+    <h1>Staff profile</h1>
+    <div class="customer-image">
+       
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGpd_w3Nrl8toFmsuSaznFR7BmJMpYzV0kCw&usqp=CAU" alt="Customer Image">
+    </div>
+    <div class="customer-info">
+        <div class="customer-id">Staff id:{{id}} </div>
+        <div class="customer-name">Staff firstname:{{firstname}}</div>
+        <div class="customer-name">Staff username:{{username}}</div>
+<div class="buttongroup">
+    <div class="btn"><a href="{% url 'update' id %}"><button>Update</button></a></div>
+    <div class="btn"><a href="{% url 'delete' id %}"><button type="submit">Delete</button></a></div>
+    <div class="btn"><a href="/stafflogout/"><button >Logout</button></a></div>
+    <div class="btn"><a href="/roompage"><button>Room</button></a></div>
+   
+</div>
+
+    </div>
+</div>
+
+</body>
+</html>

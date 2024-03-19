@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbar-nav a {
+            color: #fff;
+            margin-right: 20px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .welcome-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .welcome-section img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-greeting {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .overview-section {
+            padding: 80px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .overview-section img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .overview-text {
+            max-width: 500px;
+        }
+
+        /* Add your own styles for responsiveness and additional customizations */
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="data:image/png;base64,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" alt="Hotel Logo" style="max-height: 40px;">
+        </a>
+        <div class="navbar-nav">
+            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="/about/">About</a>
+            <a class="nav-link" href="/roomdisplay/">Reservation</a>
+            <a class="nav-link" href="/dashbord/">Dashboard</a>
+            <a class="nav-link" href="/contact/">Contact</a>
+
+        </div>
+    </div>
+</nav>
+
+<!-- Welcome Section -->
+<section class="welcome-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://c4.wallpaperflare.com/wallpaper/624/380/1000/life-resort-hotel-resort-hotel-wallpaper-preview.jpg" alt="Welcome Image">
+            </div>
+            <div class="col-md-6">
+                <h2 class="welcome-greeting">Welcome to Our Hotel</h2>
+                <p>Your welcome message goes here. Use beautiful fonts to make it more appealing.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Overview Section -->
+<section class="overview-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="overview-text">
+                    <h2>Hotel Overview</h2>
+                    <p>Your overview paragraph goes here. Provide a brief description of your hotel.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="https://c4.wallpaperflare.com/wallpaper/132/777/256/vacation-costa-adeje-gran-hotel-best-hotels-of-2017-resort-wallpaper-preview.jpg" alt="Overview Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bootstrap JS and Popper.js (required for Bootstrap components) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

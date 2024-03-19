@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .login-container {
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container login-container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">customer login</h2>
+                </div>
+                <div class="card-body">
+                    <div id="errorDiv" class="alert alert-danger" style="display:none;"></div>
+                    <form id="loginForm"  action="/userlog_c/" method="POST" enctype="multipart/form-data" >
+                        {%csrf_token%}
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" >
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" >
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+<a href="/register_c/">create an account</a>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JavaScript for form validation -->
+<!-- ... (your HTML code) -->
+
+<!-- Custom JavaScript for form validation -->
+<!-- <script>
+    function validateForm() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var errorDiv = document.getElementById('errorDiv');
+
+        if (email === "") {
+            errorDiv.innerHTML = "Please fill in email.";
+            errorDiv.style.display = "block";
+            return false;
+        }
+
+        if (password === "") {
+            errorDiv.innerHTML = "Please fill in password.";
+            errorDiv.style.display = "block";
+            return false;
+        }
+
+        // You can add more complex validation logic if needed
+
+        // If everything is valid, hide the error div
+        errorDiv.style.display = "none";
+        
+        return true;
+    }
+</script> -->
+
+<!-- ... (rest of your HTML code) -->
+
+
+</body>
+</html>
